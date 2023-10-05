@@ -1,0 +1,39 @@
+.material.light {
+    --tg-theme-bg-color: #ffffff;
+    --tg-theme-text-color: #222222;
+    --tg-theme-hint-color: #a8a8a8;
+    --tg-theme-link-color: #2678b6;
+    --tg-theme-button-color: #50a8eb;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #f0f0f0;
+}
+
+.material.dark {
+    --tg-theme-bg-color: #1d2733;
+    --tg-theme-text-color: #ffffff;
+    --tg-theme-hint-color: #7d8b99;
+    --tg-theme-link-color: #5eabe1;
+    --tg-theme-button-color: #50a8eb;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #151e27;
+}
+
+.apple.light {
+    --tg-theme-bg-color: #ffffff;
+    --tg-theme-text-color: #000000;
+    --tg-theme-hint-color: #8e8e93;
+    --tg-theme-link-color: #007aff;
+    --tg-theme-button-color: #007aff;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #efeff4;
+}
+
+.apple.dark {
+    --tg-theme-bg-color: #1c1c1d;
+    --tg-theme-text-color: #ffffff;
+    --tg-theme-hint-color: #98989e;
+    --tg-theme-link-color: #3e88f7;
+    --tg-theme-button-color: #3e88f7;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #000000;
+}
