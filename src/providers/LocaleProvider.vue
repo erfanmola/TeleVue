@@ -4,7 +4,7 @@
 
     const props = defineProps({
         locale: {
-            default: WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase(),
+            default: WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en',
             type: String,
         },
     });
