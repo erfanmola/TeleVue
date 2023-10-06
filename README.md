@@ -54,8 +54,5 @@ TeleVue is still an in-development library and some features may change overtime
 - [ ] BackButton
 - [ ] MainButton
 
-## Other UI Frameworks
-Currently I have no plans to implement the library for other frameworks/libraries, Specially that one thing which they call it "React" and looks like "Wat Sap", Vue is the Telegram of the frameworks, so just stick with it.
-
 ## Contribution
 Everyone is welcomed to contribute to the project, you can start from [TeleVue's Github Repository](https://github.com/erfanmola/TeleVue)
