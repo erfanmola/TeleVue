@@ -20,7 +20,7 @@ export default {
     },
 }
 
-export const normal = {};
+export const Default = {};
 
 export const checked = {
     args: {

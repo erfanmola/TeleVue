@@ -24,13 +24,13 @@ export default {
     },
 }
 
-export const normal_round = {
+export const Default_round = {
     args: {
         type: 'round'
     }
 };
 
-export const normal_square = {
+export const Default_square = {
     args: {
         type: 'square'
     }
