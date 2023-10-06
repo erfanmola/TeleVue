@@ -36,7 +36,7 @@
     <!-- Teleport the font stylesheet to the <head> of the document -->
     <teleport to="head" v-if="provideFonts">
         <!-- Load SF Pro Display font on iOS & MacOS -->
-        <link v-if="platform === 'ios' || platform === 'macos'" href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98770" rel="stylesheet">
+        <link v-if="(props.theme || theme) === 'apple'" href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98770" rel="stylesheet">
         <!-- Load Roboto font on any other platform -->
         <link v-else href="https://fonts.cdnfonts.com/css/roboto?styles=14394,14400" rel="stylesheet">
     </teleport>
