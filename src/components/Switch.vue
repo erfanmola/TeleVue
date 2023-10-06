@@ -75,7 +75,8 @@
         }
 
         &.apple {
-            
+            background-color: transparent;
+
             > label {
 
                 > div {
