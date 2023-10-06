@@ -4,7 +4,7 @@
     import hmac from 'js-crypto-hmac';
 
     const props = defineProps({
-        bot_token: {
+        hex_hmac_signature: {
             type: String,
             required: true,
         }
@@ -27,7 +27,15 @@
         return [...new Uint8Array(buffer)]
         .map(x => x.toString(16).padStart(2, '0'))
         .join('');
-    }
+    };
+
+    const hex2Buffer = (hexString) => {
+        const bytes = [];
+        for (let i = 0; i < hexString.length; i += 2) {
+            bytes.push(parseInt(hexString.substr(i, 2), 16));
+        }
+        return new Uint8Array(bytes);
+    };
 
     let initDataUnsafe = {...WebApp.initDataUnsafe};
     let initDataHash   = initDataUnsafe.hash;
@@ -43,13 +51,9 @@
     })
     .join('\n');
 
-    hmac.compute(new TextEncoder().encode("WebAppData"), new TextEncoder().encode(props.bot_token), 'SHA-256').then((secret_key) => {
+    hmac.compute(hex2Buffer(props.hex_hmac_signature), new TextEncoder().encode(initDataString), 'SHA-256').then((result) => {
 
-        hmac.compute(secret_key, new TextEncoder().encode(initDataString), 'SHA-256').then((result) => {
-
-            clientAuthorized.value = buffer2Hex(result) === initDataHash;
-
-        });
+        clientAuthorized.value = buffer2Hex(result) === initDataHash;
 
     });
 
