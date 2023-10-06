@@ -1,3 +1,5 @@
+![TeleVue](https://raw.githubusercontent.com/erfanmola/TeleVue/master/TeleVue.png)
+
 # TeleVue
 TeleVue is a simple lightweight UI library for [Telegram Web Apps](https://core.telegram.org/bots/webapps) in **Vue**
 
