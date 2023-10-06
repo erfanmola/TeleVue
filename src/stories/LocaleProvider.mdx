@@ -1,0 +1,58 @@
+import { Description, Meta } from "@storybook/addon-docs";
+
+<Meta title="Providers/LocaleProvider" />
+
+<div className="sb-container">
+
+    # LocaleProvider
+
+    This component provides the `locale` and `direction` values to it's children and their descendants. Every component placed inside the LocaleProvider or it's descendants, will inherit it's `locale` and `direction` properties from the LocaleProvider.
+
+    ```javascript
+    import { AppearanceProvider, LocaleProvider, List } from 'tele-vue-lib';
+    import 'tele-vue-lib/style.css';
+
+    <AppearanceProvider>
+        <LocaleProvider>
+            <List>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </List>
+        </LocaleProvider>
+    </AppearanceProvider>
+    ```
+    ## Properties
+    By default, LocaleProvider obtains it's `locale` from the Telegram Client that WebApp is launched on, but if it fails for any reason, it will fallback to `locale` of `en`. You can also specify the `locale` and `direction` property manually.
+
+    ### `locale`
+    This property specifies the locale of the LocaleProvider, Value can be a 2-digit [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+
+    ### `direction`
+    This property is calculated from the `locale` unless specified manually, also defaults to `ltr` based on `locale` defaults to `en`. Almost all locales except `ar`, `he`, `fa`, `ur`, `sd`, `ps` and `yi` are directioned as `ltr`.
+
+    ## Provides
+    LocaleProvider provides `locale` and `direction`, you can use these keywords with `inject()` method in Vue to access their value in any descendants of the LocaleProvider.
+
+    ## Forcing locale settings
+    As stated above, LocaleProvider obtains it's properties from Telegram Client, but you can force your own properties.
+
+    ```javascript
+    import { AppearanceProvider, LocaleProvider, List } from 'tele-vue-lib';
+    import 'tele-vue-lib/style.css';
+
+    <AppearanceProvider>
+        <LocaleProvider locale="ar" direction="rtl">
+            <List>
+                <li>موضوع ١</li>
+                <li>موضوع ٢</li>
+                <li>موضوع ٣</li>
+            </List>
+        </LocaleProvider>
+    </AppearanceProvider>
+    ```
+</div>
+
+<style>
+
+</style>
