@@ -26,6 +26,8 @@ import { Description, Meta } from "@storybook/addon-docs";
     ## Security Note
     PLEASE READ THIS: By providing `hex_hmac_signature`, you are giving the signed value of your `bot token` with `WebAppData` in your frontend. While it's hashed and not extremely dangerous, anyone with JavaScript knowledge can access your signature and fake sign any data and pass it to the WebApp, pretending to be a Telegram client. Therefore, this method is not guaranteed to be precise. For precision, you need to use backend validation.
     
+    ## Properties
+
     ### `hex_hmac_signature`
     [As Telegram states here](https://core.telegram.org/bots/webapps#validating-data-received-via-the-mini-app), you have to calculate the `HMAC SHA-256` of your `Bot Token` with the key of `WebAppData` to obtain the signature. You can do this by coding it yourself, or you can use [online tools like this one](https://www.freeformatter.com/hmac-generator.html#before-output).
     
@@ -33,6 +35,9 @@ import { Description, Meta } from "@storybook/addon-docs";
     secret_key = HMAC_SHA256(<bot_token>, "WebAppData")
     ```
     As the code above generates Unicode characters, we need to convert it to hex value (Most online tools do it automatically).
+
+    ## Slots
+    AuthProvider contains two slots, the `default` slot and `unauthorized` slot. If authorization passes, the `default` slot will be rendered and if not, the `unauthorized` slot will be shown.
 
     ## Provides
     AuthProvider provides `authorized`, you can use this keyword with `inject()` method in Vue to access their value in any descendants of the AuthProvider.
