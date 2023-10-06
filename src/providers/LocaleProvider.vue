@@ -7,6 +7,10 @@
             default: WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en',
             type: String,
         },
+        direction: {
+            default: null,
+            type: String,
+        }
     });
 
     const rtlLocales = [
@@ -24,7 +28,7 @@
     document.body.classList.add(direction);
 
     provide('locale', props.locale);
-    provide('direction', direction);
+    provide('direction', props.direction || direction);
 </script>
 
 <template>
