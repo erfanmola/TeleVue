@@ -34,12 +34,13 @@ TeleVue is still an in-development library and some features may change overtime
 ### Providers
 - [x] AppearanceProvider
 - [x] LocaleProvider
-- [ ] AuthorizationProvider
+- [x] AuthProvider
 
 ### UI Components
 - [x] Switch
 - [x] CheckBox
-- [ ] Section
+- [x] Section
+- [x] List
 - [ ] ColorPicker
 - [ ] Chips
 - [ ] Avatar
