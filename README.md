@@ -1,0 +1,1 @@
+Silence is gold, at least momentarily
