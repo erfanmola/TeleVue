@@ -32,6 +32,7 @@
         flex-direction: column;
         list-style: none;
         padding: 0;
+        overflow: hidden;
         
         > * {
             width: 100%;
