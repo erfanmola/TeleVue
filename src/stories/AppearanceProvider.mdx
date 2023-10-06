@@ -1,0 +1,49 @@
+import { Description, Meta } from "@storybook/addon-docs";
+
+<Meta title="Providers/AppearanceProvider" />
+
+<div className="sb-container">
+
+    # AppearanceProvider
+
+    This component provides the `colorScheme`, `platform` and `theme` values to it's children and their descendants. Every component placed inside the AppearanceProvider or it's descendants, will inherit it's `colorScheme`, `platform` and `theme` properties from the AppearanceProvider, unless we specify the properties specifically for that component.  
+
+    ```javascript
+    import { AppearanceProvider, Switch } from 'tele-vue-lib';
+    import 'tele-vue-lib/style.css';
+
+    <AppearanceProvider>
+        <Switch /> // The Switch component will inherit it's `colorScheme`, `platform` and `theme` from the AppearanceProvider
+    </AppearanceProvider>
+    ```
+    ## Properties
+    By default, AppearanceProvider obtains it's `colorScheme`, `platform` and `theme` from the Telegram Client that WebApp is launched on, but if it fails for any reason, it will fallback to `theme` of `material`. You can also specify the `colorScheme`, `platform` and `theme` properties manually.
+
+    ### `colorScheme`
+    This property specifies the scheme of AppearanceProvider. Value can be `light` or `dark`.
+
+    ### `platform`
+    This property specifies the platform of the AppearanceProvider. There are lots of different Telegram clients: MacOS, Desktop, iOS, Android, etc. You probably want to create different UX depending on platform.
+
+    ### `theme`
+    This property is calculated from the `platform` unless specified manually, also defaults to `material`, generally Telegram Clients are divided into two different theme styles and design languages: `apple`, `material`.
+
+    ### `provideFonts`
+    This property specifies whether the AppearanceProvider should load Font Assets or not. Values can be `true` or `false` and by default it's `true`. AppearanceProvider will load the `Roboto` font family for `material` and `SF Pro` font family for `apple` theme.
+
+    ## Forcing appearance settings
+    As stated above, AppearanceProvider obtains it's properties from Telegram Client, but you can force your own properties.
+
+    ```javascript
+    import { AppearanceProvider, Switch } from 'tele-vue-lib';
+    import 'tele-vue-lib/style.css';
+
+    <AppearanceProvider theme="apple" colorScheme="dark" platform="macos">
+        <Switch />
+    </AppearanceProvider>
+    ```
+</div>
+
+<style>
+
+</style>
