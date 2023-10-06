@@ -31,6 +31,9 @@ import { Description, Meta } from "@storybook/addon-docs";
     ### `provideFonts`
     This property specifies whether the AppearanceProvider should load Font Assets or not. Values can be `true` or `false` and by default it's `true`. AppearanceProvider will load the `Roboto` font family for `material` and `SF Pro` font family for `apple` theme.
 
+    ## Provides
+    AppearanceProvider provides `colorScheme`, `platform` and `theme`, you can use these keywords with `inject()` method in Vue to access their value in any descendants of the AppearanceProvider.
+
     ## Forcing appearance settings
     As stated above, AppearanceProvider obtains it's properties from Telegram Client, but you can force your own properties.
 
