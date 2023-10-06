@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@twa-dev/sdk": "^6.9.0",
+    "js-crypto-hmac": "^1.0.7",
     "vue": "^3.3.4"
   },
   "devDependencies": {
