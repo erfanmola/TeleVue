@@ -1,0 +1,78 @@
+import Checkbox from '../components/Checkbox.vue';
+
+export default {
+    title: 'Components/Checkbox',
+    component: Checkbox,
+    tags: ['autodocs'],
+    argTypes: {
+        type: {
+            options: ['round', 'square'],
+            control: { type: 'radio' },
+        },
+        platform: {
+            options: [ "android", "android_x", "ios", "macos", "tdesktop", "weba", "webk", "unigram", "unknown" ],
+            control: { type: 'select' },
+        },
+        colorScheme: {
+            options: ['light', 'dark'],
+            control: { type: 'radio' },
+        },
+        theme: {
+            options: ['material', 'apple'],
+            control: { type: 'radio' },
+        },
+    },
+}
+
+export const normal_round = {
+    args: {
+        type: 'round'
+    }
+};
+
+export const normal_square = {
+    args: {
+        type: 'square'
+    }
+};
+
+export const checked_round = {
+    args: {
+        checked: true,
+    }
+}
+
+export const checked_square = {
+    args: {
+        checked: true,
+        type: 'square'
+    }
+}
+
+export const disabled_round = {
+    args: {
+        disabled: true,
+    }
+}
+
+export const disabled_square = {
+    args: {
+        disabled: true,
+        type: 'square'
+    }
+}
+
+export const checked_disabled_round = {
+    args: {
+        checked: true,
+        disabled: true,
+    }
+}
+
+export const checked_disabled_square = {
+    args: {
+        checked: true,
+        disabled: true,
+        type: 'square'
+    }
+}
