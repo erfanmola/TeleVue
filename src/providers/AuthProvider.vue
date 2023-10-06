@@ -52,6 +52,8 @@
         });
 
     });
+
+    provide('authorized', clientAuthorized.value);
 </script>
 
 <template>
