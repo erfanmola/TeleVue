@@ -1,4 +1,4 @@
-.material.light {
+.material.light, .tele-vue-theme-material.tele-vue-colorScheme-light {
     --tg-theme-bg-color: #ffffff;
     --tg-theme-text-color: #222222;
     --tg-theme-hint-color: #a8a8a8;
@@ -8,7 +8,7 @@
     --tg-theme-secondary-bg-color: #f0f0f0;
 }
 
-.material.dark {
+.material.dark, .tele-vue-theme-material.tele-vue-colorScheme-dark {
     --tg-theme-bg-color: #1d2733;
     --tg-theme-text-color: #ffffff;
     --tg-theme-hint-color: #7d8b99;
@@ -18,7 +18,7 @@
     --tg-theme-secondary-bg-color: #151e27;
 }
 
-.apple.light {
+.apple.light, .tele-vue-theme-apple.tele-vue-colorScheme-light {
     --tg-theme-bg-color: #ffffff;
     --tg-theme-text-color: #000000;
     --tg-theme-hint-color: #8e8e93;
@@ -28,7 +28,7 @@
     --tg-theme-secondary-bg-color: #efeff4;
 }
 
-.apple.dark {
+.apple.dark, .tele-vue-theme-apple.tele-vue-colorScheme-dark {
     --tg-theme-bg-color: #1c1c1d;
     --tg-theme-text-color: #ffffff;
     --tg-theme-hint-color: #98989e;
@@ -36,4 +36,10 @@
     --tg-theme-button-color: #3e88f7;
     --tg-theme-button-text-color: #ffffff;
     --tg-theme-secondary-bg-color: #000000;
+}
+
+#tele-vue-appearance-provider {
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
+    padding: 1rem;
 }
