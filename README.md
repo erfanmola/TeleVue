@@ -6,8 +6,8 @@ TeleVue is a simple lightweight UI library for [Telegram Web Apps](https://core.
 ## Installation
 You can simply use NPM to install TeleVue package in your Vue project.  
 ```
-yarn add @erfanmola/TeleVue
-npm install @erfanmola/TeleVue
+yarn add @erfanmola/televue
+npm install @erfanmola/televue
 ```
 
 ## Usage  
