@@ -12,8 +12,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "deploy:storybook": "gh-pages -d storybook-static && rm -rf storybook-static"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@twa-dev/sdk": "^6.9.0",
@@ -30,7 +29,6 @@
     "@storybook/vue3": "^7.4.6",
     "@storybook/vue3-vite": "^7.4.6",
     "@vitejs/plugin-vue": "^4.4.0",
-    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.0",
