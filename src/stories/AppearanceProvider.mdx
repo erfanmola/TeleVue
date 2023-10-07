@@ -9,8 +9,8 @@ import { Description, Meta } from "@storybook/addon-docs";
     This component provides the `colorScheme`, `platform` and `theme` values to it's children and their descendants. Every component placed inside the AppearanceProvider or it's descendants, will inherit it's `colorScheme`, `platform` and `theme` properties from the AppearanceProvider, unless we specify the properties specifically for that component.  
 
     ```javascript
-    import { AppearanceProvider, Switch } from 'tele-vue-lib';
-    import 'tele-vue-lib/style.css';
+    import { AppearanceProvider, Switch } from '@erfanmola/televue';
+    import '@erfanmola/televue/style.css';
 
     <AppearanceProvider>
         <Switch /> // The Switch component will inherit it's `colorScheme`, `platform` and `theme` from the AppearanceProvider
@@ -38,8 +38,8 @@ import { Description, Meta } from "@storybook/addon-docs";
     As stated above, AppearanceProvider obtains it's properties from Telegram Client, but you can force your own properties.
 
     ```javascript
-    import { AppearanceProvider, Switch } from 'tele-vue-lib';
-    import 'tele-vue-lib/style.css';
+    import { AppearanceProvider, Switch } from '@erfanmola/televue';
+    import '@erfanmola/televue/style.css';
 
     <AppearanceProvider theme="apple" colorScheme="dark" platform="macos">
         <Switch />

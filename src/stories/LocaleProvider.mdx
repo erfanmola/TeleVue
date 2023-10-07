@@ -9,8 +9,8 @@ import { Description, Meta } from "@storybook/addon-docs";
     This component provides the `locale` and `direction` values to it's children and their descendants. Every component placed inside the LocaleProvider or it's descendants, will inherit it's `locale` and `direction` properties from the LocaleProvider.
 
     ```javascript
-    import { AppearanceProvider, LocaleProvider, List } from 'tele-vue-lib';
-    import 'tele-vue-lib/style.css';
+    import { AppearanceProvider, LocaleProvider, List } from '@erfanmola/televue';
+    import '@erfanmola/televue/style.css';
 
     <AppearanceProvider>
         <LocaleProvider>
@@ -38,8 +38,8 @@ import { Description, Meta } from "@storybook/addon-docs";
     As stated above, LocaleProvider obtains it's properties from Telegram Client, but you can force your own properties.
 
     ```javascript
-    import { AppearanceProvider, LocaleProvider, List } from 'tele-vue-lib';
-    import 'tele-vue-lib/style.css';
+    import { AppearanceProvider, LocaleProvider, List } from '@erfanmola/televue';
+    import '@erfanmola/televue/style.css';
 
     <AppearanceProvider>
         <LocaleProvider locale="ar" direction="rtl">

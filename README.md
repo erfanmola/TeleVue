@@ -13,8 +13,8 @@ npm install @erfanmola/televue
 ## Usage  
 Inside your vue projects, you can import any provider/component that you want, but keep in mind that you must import the `style.css` file separately. For example:  
 ```javascript
-import { AppearanceProvider, LocaleProvider } from 'tele-vue-lib';
-import 'tele-vue-lib/style.css';
+import { AppearanceProvider, LocaleProvider } from '@erfanmola/televue';
+import '@erfanmola/televue/style.css';
 ```
 
 ## Motivation
