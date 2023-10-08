@@ -56,3 +56,6 @@ TeleVue is still an in-development library and some features may change overtime
 
 ## Contribution
 Everyone is welcome to contribute to the project, you can start from [TeleVue's Github Repository](https://github.com/erfanmola/TeleVue)
+
+## License
+[MIT](https://github.com/erfanmola/TeleVue/blob/master/LICENSE)
