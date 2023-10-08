@@ -96,7 +96,8 @@
 
             > label {
                 > input:checked ~ .checkmark {
-                    background-color: var(--tg-theme-hint-color);
+                    border-color: var(--tg-theme-hint-color);
+                    background: radial-gradient(circle, var(--tg-theme-hint-color) 50%, transparent 51%);
                 }
             }
         }
