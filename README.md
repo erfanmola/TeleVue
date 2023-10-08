@@ -55,4 +55,4 @@ TeleVue is still an in-development library and some features may change overtime
 - [ ] MainButton
 
 ## Contribution
-Everyone is welcomed to contribute to the project, you can start from [TeleVue's Github Repository](https://github.com/erfanmola/TeleVue)
+Everyone is welcome to contribute to the project, you can start from [TeleVue's Github Repository](https://github.com/erfanmola/TeleVue)
