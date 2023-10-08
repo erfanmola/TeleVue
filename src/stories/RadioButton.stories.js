@@ -20,55 +20,28 @@ export default {
     },
 }
 
-export const Default_round = {
+export const Default = {
     args: {
         type: 'round'
     }
 };
 
-export const Default_square = {
-    args: {
-        type: 'square'
-    }
-};
-
-export const checked_round = {
+export const checked = {
     args: {
         checked: true,
     }
 }
 
-export const checked_square = {
-    args: {
-        checked: true,
-        type: 'square'
-    }
-}
-
-export const disabled_round = {
+export const disabled = {
     args: {
         disabled: true,
     }
 }
 
-export const disabled_square = {
-    args: {
-        disabled: true,
-        type: 'square'
-    }
-}
 
-export const checked_disabled_round = {
+export const checked_disabled = {
     args: {
         checked: true,
         disabled: true,
-    }
-}
-
-export const checked_disabled_square = {
-    args: {
-        checked: true,
-        disabled: true,
-        type: 'square'
     }
 }
