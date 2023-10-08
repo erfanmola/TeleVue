@@ -5,6 +5,7 @@ import Switch from './components/Switch.vue';
 import List from './components/List.vue';
 import Checkbox from './components/Checkbox.vue';
 import Section from './components/Section.vue';
+import RadioButton from './components/RadioButton.vue';
 
 export { 
     AppearanceProvider,
@@ -14,4 +15,5 @@ export {
     List,
     Checkbox,
     Section,
+    RadioButton,
 };

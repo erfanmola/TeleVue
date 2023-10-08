@@ -39,6 +39,7 @@ TeleVue is still an in-development library and some features may change overtime
 ### UI Components
 - [x] Switch
 - [x] CheckBox
+- [x] RadioButton
 - [x] Section
 - [x] List
 - [ ] ColorPicker
