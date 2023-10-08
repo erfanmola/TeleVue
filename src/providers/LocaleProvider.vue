@@ -4,7 +4,7 @@
 
     const props = defineProps({
         locale: {
-            default: WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en',
+            default: null,
             type: String,
         },
         direction: {
@@ -27,7 +27,7 @@
 
     document.body.classList.add(direction);
 
-    provide('locale', props.locale);
+    provide('locale', props.locale || WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en');
     provide('direction', props.direction || direction);
 </script>
 
