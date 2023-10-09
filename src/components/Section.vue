@@ -50,6 +50,7 @@
                 font-size: 1rem;
                 font-weight: normal;
                 padding-bottom: 1rem;
+                user-select: none;
             }
             
             > div {
@@ -62,6 +63,7 @@
             font-weight: normal;
             color: var(--tg-theme-hint-color);
             padding: 0.325rem 1rem;
+            user-select: none;
         }
 
         &.material {
