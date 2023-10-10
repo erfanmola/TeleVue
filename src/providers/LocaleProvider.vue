@@ -23,18 +23,19 @@
         "yi", // Yiddish
     ];
 
-    const direction = rtlLocales.includes(props.locale) ? 'rtl' : 'ltr';
+    const finalLocale    = props.locale || WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en';
+    const finalDirection = props.direction || rtlLocales.includes(finalLocale) ? 'rtl' : 'ltr';
 
-    document.body.classList.add(direction);
+    document.body.classList.add(finalDirection);
 
-    provide('locale', props.locale || WebApp.initDataUnsafe.user?.language_code?.toString().toLowerCase() || 'en');
-    provide('direction', props.direction || direction);
+    provide('locale', finalLocale);
+    provide('direction', finalDirection);
 </script>
 
 <template>
     <div :class="[
-        `tele-vue-direction-${ direction }`,
-        `tele-vue-locale-${ locale }`
+        `tele-vue-direction-${ finalDirection }`,
+        `tele-vue-locale-${ finalLocale }`
     ]">
         <slot />
     </div>
