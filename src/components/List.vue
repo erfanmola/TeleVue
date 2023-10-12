@@ -38,6 +38,11 @@
             width: 100%;
             padding: 0.75rem 1rem;
             position: relative;
+            
+            > * {
+                position: relative;
+                z-index: 1;
+            }
 
             &:active {
                 background-color: var(--tele-vue-quaternary-fill-background);
