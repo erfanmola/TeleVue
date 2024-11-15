@@ -1,6 +1,6 @@
 {
 	"name": "@erfanmola/televue",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"type": "module",
 	"files": ["dist"],
 	"main": "./dist/tele-vue-lib.umd.cjs",
