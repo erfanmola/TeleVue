@@ -1,46 +1,44 @@
 {
-  "name": "@erfanmola/televue",
-  "version": "0.1.6",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/tele-vue-lib.umd.cjs",
-  "module": "./dist/tele-vue-lib.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@twa-dev/sdk": "^6.9.0",
-    "js-crypto-hmac": "^1.0.7",
-    "vue": "^3.3.4"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.4.6",
-    "@storybook/addon-interactions": "^7.4.6",
-    "@storybook/addon-links": "^7.4.6",
-    "@storybook/addon-mdx-gfm": "^7.4.6",
-    "@storybook/blocks": "^7.4.6",
-    "@storybook/testing-library": "^0.2.2",
-    "@storybook/vue3": "^7.4.6",
-    "@storybook/vue3-vite": "^7.4.6",
-    "@vitejs/plugin-vue": "^4.4.0",
-    "gh-pages": "^6.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.69.3",
-    "storybook": "^7.4.6",
-    "vite": "^4.4.11"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/tele-vue-lib.js",
-      "require": "./dist/tele-vue-lib.umd.cjs"
-    },
-    "./style.css": "./dist/style.css"
-  }
+	"name": "@erfanmola/televue",
+	"version": "0.1.7",
+	"type": "module",
+	"files": ["dist"],
+	"main": "./dist/tele-vue-lib.umd.cjs",
+	"module": "./dist/tele-vue-lib.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"@twa-dev/sdk": "^7.10.1",
+		"js-crypto-hmac": "^1.0.7",
+		"vue": "^3.5.13"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^8.4.4",
+		"@storybook/addon-interactions": "^8.4.4",
+		"@storybook/addon-links": "^8.4.4",
+		"@storybook/addon-mdx-gfm": "^8.4.4",
+		"@storybook/blocks": "^8.4.4",
+		"@storybook/testing-library": "^0.2.2",
+		"@storybook/vue3": "^8.4.4",
+		"@storybook/vue3-vite": "^8.4.4",
+		"@vitejs/plugin-vue": "^5.2.0",
+		"gh-pages": "^6.2.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sass": "^1.81.0",
+		"storybook": "^8.4.4",
+		"vite": "^5.4.11"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/tele-vue-lib.js",
+			"require": "./dist/tele-vue-lib.umd.cjs"
+		},
+		"./style.css": "./dist/style.css"
+	}
 }

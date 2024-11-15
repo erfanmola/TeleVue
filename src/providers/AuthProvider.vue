@@ -1,63 +1,64 @@
 <script setup>
-    import { ref, provide } from 'vue';
-    import WebApp from '@twa-dev/sdk';
-    import hmac from 'js-crypto-hmac';
+import { ref, provide } from 'vue';
+import WebApp from '@twa-dev/sdk';
+import hmac from 'js-crypto-hmac';
 
-    const props = defineProps({
-        hex_hmac_signature: {
-            type: String,
-            required: true,
-        }
-    });
+const props = defineProps({
+    hex_hmac_signature: {
+        type: String,
+        required: true,
+    }
+});
 
-    const clientAuthorized = ref(null);
+const clientAuthorized = ref(null);
 
-    const ksort = (obj) => {
-        const sortedKeys = Object.keys(obj).sort();
-        const sortedObj = {};
+const ksort = (obj) => {
+    const sortedKeys = Object.keys(obj).sort();
+    const sortedObj = {};
 
-        sortedKeys.forEach(key => {
-            sortedObj[key] = obj[key];
-        });
-
-        return sortedObj;
+    for (const key of sortedKeys) {
+        sortedObj[key] = obj[key];
     };
 
-    const buffer2Hex = (buffer) => {
-        return [...new Uint8Array(buffer)]
+    return sortedObj;
+};
+
+const buffer2Hex = (buffer) => {
+    return [...new Uint8Array(buffer)]
         .map(x => x.toString(16).padStart(2, '0'))
         .join('');
-    };
+};
 
-    const hex2Buffer = (hexString) => {
-        const bytes = [];
-        for (let i = 0; i < hexString.length; i += 2) {
-            bytes.push(parseInt(hexString.substr(i, 2), 16));
-        }
-        return new Uint8Array(bytes);
-    };
+const hex2Buffer = (hexString) => {
+    const bytes = [];
+    for (let i = 0; i < hexString.length; i += 2) {
+        bytes.push(Number.parseInt(hexString.substr(i, 2), 16));
+    }
+    return new Uint8Array(bytes);
+};
 
-    let initDataUnsafe = {...WebApp.initDataUnsafe};
-    let initDataHash   = initDataUnsafe.hash;
-    let initDataString = '';
+let initDataUnsafe = { ...WebApp.initDataUnsafe };
+const initDataHash = initDataUnsafe.hash;
+let initDataString = '';
 
-    delete initDataUnsafe['hash'];
-    initDataUnsafe = ksort(initDataUnsafe);
+// biome-ignore lint/performance/noDelete: <explanation>
+delete initDataUnsafe.hash;
+initDataUnsafe = ksort(initDataUnsafe);
 
-    initDataString = Object.entries(initDataUnsafe)
+initDataString = Object.entries(initDataUnsafe)
     .map(([key, value]) => {
         value = typeof value === 'object' ? JSON.stringify(value, null, 0) : value;
         return `${key}=${value}`;
     })
-    .join('\n');
+    .join('\n').replace(/\//g, "\\/");
 
-    hmac.compute(hex2Buffer(props.hex_hmac_signature), new TextEncoder().encode(initDataString), 'SHA-256').then((result) => {
+hmac.compute(hex2Buffer(props.hex_hmac_signature), new TextEncoder().encode(initDataString), 'SHA-256').then((result) => {
 
-        clientAuthorized.value = buffer2Hex(result) === initDataHash;
+    clientAuthorized.value = buffer2Hex(result) === initDataHash;
 
-    });
+});
 
-    provide('authorized', clientAuthorized.value);
+provide('authorized', clientAuthorized.value);
 </script>
 
 <template>
@@ -67,6 +68,4 @@
     </slot>
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
